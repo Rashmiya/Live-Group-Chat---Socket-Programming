@@ -33,7 +33,6 @@ public class Server {
                     while (accept.isConnected()){
                         // read the messages
                         String message = dataInputStream1.readUTF();
-                        System.out.println("Client 1 : "+message);
 
                         dataOutputStream2.writeUTF("Rashmiya : " + message);
                         dataOutputStream3.writeUTF("Rashmiya : " + message);
@@ -68,7 +67,6 @@ public class Server {
                     while (accept.isConnected()){
                         // read the messages
                         String message = dataInputStream2.readUTF();
-                        System.out.println("Client 2 : "+message);
 
                         dataOutputStream1.writeUTF("Risni : " + message);
                         dataOutputStream3.writeUTF("Risni : " + message);
@@ -103,7 +101,6 @@ public class Server {
                     while (accept.isConnected()){
                         // read the messages
                         String message = dataInputStream3.readUTF();
-                        System.out.println("Client 3 : "+message);
 
                         dataOutputStream1.writeUTF("Fareena : " + message);
                         dataOutputStream2.writeUTF("Fareena : " + message);
