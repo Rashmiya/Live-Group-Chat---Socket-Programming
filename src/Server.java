@@ -37,12 +37,6 @@ public class Server {
                         dataOutputStream2.writeUTF("Rashmiya : " + message);
                         dataOutputStream3.writeUTF("Rashmiya : " + message);
                     }
-                    if (!accept.isConnected()){
-                        System.out.println("Client 1 has left the chat ");
-
-                        dataOutputStream2.writeUTF("Rashmiya Left the Chat");
-                        dataOutputStream3.writeUTF("Rashmiya Left the Chat");
-                    }
                 }catch (IOException e){
                     e.printStackTrace();
                     System.out.println("Error Occur in Server for first Client");
@@ -71,12 +65,6 @@ public class Server {
                         dataOutputStream1.writeUTF("Risni : " + message);
                         dataOutputStream3.writeUTF("Risni : " + message);
                     }
-                    if (!accept.isConnected()){
-                        System.out.println("Client 2 has left the chat ");
-
-                        dataOutputStream1.writeUTF("Risni Left the Chat");
-                        dataOutputStream3.writeUTF("Risni Left the Chat");
-                    }
                 }catch (IOException e){
                     e.printStackTrace();
                     System.out.println("Error Occur in Server for second Client");
@@ -104,12 +92,6 @@ public class Server {
 
                         dataOutputStream1.writeUTF("Fareena : " + message);
                         dataOutputStream2.writeUTF("Fareena : " + message);
-                    }
-                    if (!accept.isConnected()){
-                        System.out.println("Client 3 has left the chat ");
-
-                        dataOutputStream1.writeUTF("Fareena Left the Chat");
-                        dataOutputStream2.writeUTF("Fareena Left the Chat");
                     }
                 }catch (IOException e){
                     e.printStackTrace();

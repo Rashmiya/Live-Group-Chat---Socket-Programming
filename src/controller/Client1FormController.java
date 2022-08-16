@@ -1,10 +1,14 @@
 package controller;
 
 import javafx.event.ActionEvent;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -18,6 +22,7 @@ public class Client1FormController {
     public TextArea txtTextArea;
 
     final int PORT = 9000;
+    public ImageView logOut;
     Socket socket;
     DataInputStream dataInputStream;
     DataOutputStream dataOutputStream;
@@ -48,5 +53,10 @@ public class Client1FormController {
         dataOutputStream.flush();
         txtTextArea.appendText("You : " + messageToSend + "\n");
         txtTypeMessage.clear();
+    }
+
+    public void logOut(MouseEvent mouseEvent) {
+        Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        stage.close();
     }
 }
