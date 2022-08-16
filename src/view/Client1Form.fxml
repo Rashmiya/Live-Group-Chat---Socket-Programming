@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
@@ -10,15 +11,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="Client1" prefHeight="533.0" prefWidth="415.0" style="-fx-background-color: #0E1621;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Client1FormController">
+<AnchorPane fx:id="Client1" prefHeight="571.0" prefWidth="441.0" style="-fx-background-color: #0E1621;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Client1FormController">
    <children>
-      <TextField fx:id="txtTypeMessage" layoutX="22.0" layoutY="473.0" prefHeight="37.0" prefWidth="305.0" />
-      <Button layoutX="339.0" layoutY="473.0" mnemonicParsing="false" onAction="#sendMsgOnAction" prefHeight="37.0" prefWidth="57.0" style="-fx-background-color: #39C02B;" text="SEND">
+      <TextField fx:id="txtTypeMessage" layoutX="54.0" layoutY="505.0" prefHeight="37.0" prefWidth="305.0" promptText="Type Message">
+         <font>
+            <Font name="Constantia" size="15.0" />
+         </font></TextField>
+      <Button layoutX="371.0" layoutY="505.0" mnemonicParsing="false" onAction="#sendMsgOnAction" prefHeight="37.0" prefWidth="57.0" style="-fx-background-color: #39C02B;" text="SEND">
          <font>
             <Font name="System Bold" size="12.0" />
-         </font></Button>
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <Label fx:id="lblLabelForName" layoutX="31.0" layoutY="14.0" prefHeight="17.0" prefWidth="119.0" />
-      <TextArea fx:id="txtTextArea" layoutX="22.0" layoutY="67.0" prefHeight="389.0" prefWidth="373.0" style="-fx-background-color: #FDD6BC;" />
+      <TextArea fx:id="txtTextArea" layoutX="22.0" layoutY="67.0" prefHeight="418.0" prefWidth="400.0" style="-fx-background-color: #FDD6BC;" />
       <ImageView fitHeight="47.0" fitWidth="57.0" layoutX="23.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assests/chatIcon.png" />
@@ -33,6 +40,9 @@
          <image>
             <Image url="@assests/logOut.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
    </children>
 </AnchorPane>
